@@ -792,17 +792,18 @@ $('#studentRankModal').modal({
 </script>
 <script>
     $(document).on('click', '.add', function () {
-
+        var today = new Date().toISOString().split('T')[0];
         var html = '';
         html += '<tr>';
         html += '<td width="150"><select name="subject_' + x + '" class="form-control item_unit tddm200">' + batch_subjects + '</select></td>';
-        html += '<td><div class="input-group datepicker_init"><input type="text" name="date_from_' + x + '" class="form-control"/><span class="input-group-addon" id="basic-addon2"><i class="fa fa-calendar"></i></span></div></td>';
-        html += '<td><div class="input-group datepicker_init_time"><input type="text" name="time_from' + x + '" class="form-control"/><span class="input-group-addon" id="basic-addon2"><i class="fa fa-clock-o"></i></span></div></td>';
+        html += '<td><div class="input-group datepicker_init"><input type="text" name="date_from_' + x + '" class="form-control" value="' + today + '"><span class="input-group-addon" id="basic-addon2"><i class="fa fa-calendar"></i></span></div></td>';
+        html += '<td><div class="input-group datepicker_init_time"><input type="text" name="time_from' + x + '" class="form-control" value="08:00:00"><span class="input-group-addon" id="basic-addon2" ><i class="fa fa-clock-o"></i></span></div></td>';
         html += '<td><input type="text" name="duration' + x + '" class="form-control duration" value="0"/></td>';
         html += '<td><input type="number" name="credit_hours' + x + '" class="form-control credit_hours" value="0"/></td>';
-        html += '<td class=""><input type="text" name="room_no_' + x + '" class="form-control room_no" /></td>';
+        html += '<td class=""><input type="text" name="room_no_' + x + '" class="form-control room_no" value="0"/></td>';
         html += '<td class=""><input type="number" name="max_marks_' + x + '" class="form-control max_marks" /></td>';
         html += '<td class=""><input type="hidden" name="rows[]" value="' + x + '"> <input name="prev_row[' + x + ']" type="hidden" value="0"><input type="number" name="min_marks_' + x + '" class="form-control min_marks" /></td>';
+        html += '<td><input type="number" step="0.01" name="coef_' + x + '" class="form-control tddm150" placeholder="Coef"/></td>';
         html += '<td class="text-center" style="vertical-align: middle; cursor: pointer;"><span class="text text-danger remove fa fa-times mt5"></span></td></tr>';
         var tmp_row = $('#item_table').append(html);
 

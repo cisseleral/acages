@@ -1,0 +1,834 @@
+2025-12-22 08:27:14 - Addons Folder not exist and has been created on root directory.
+2025-12-22 08:27:14 - New addon Uploading started on Addons Folder.
+2025-12-22 08:27:14 - Starting the unzip the addon folder.
+2025-12-22 08:27:14 - File unzipped successfully to:C:\wamp64\www\ACAGES/./addons/qr_code_attendance
+2025-12-22 08:27:14 - successfully decoded JSON file C:\wamp64\www\ACAGES/./addons/qr_code_attendance/addon_info.json
+2025-12-22 08:27:14 - inserted addon info details to addons table
+2025-12-22 08:27:20 - *************************************************************************************************************
+2025-12-22 08:27:20 - successfully decoded JSON file C:\wamp64\www\ACAGES/./addons/qr_code_attendance/addon_info.json
+2025-12-22 08:27:20 - //================= Before install/update backup process has started =================//
+2025-12-22 08:27:20 - Directory created successfully.:C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/backup/backup_info.json
+2025-12-22 08:27:20 - Data successfully written to C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/backup/backup_info.json
+2025-12-22 08:27:20 - //================= Copying Backup files process has started =================//
+2025-12-22 08:27:20 - //================= Copying Backup files process has ended successfully =================//
+2025-12-22 08:27:20 - //================= Before install/update Backup process has ended =================//
+2025-12-22 08:27:20 - //================= New Addon Smart School QR Code Attendance installing process has started =================//
+2025-12-22 08:27:20 - //================= New Addon Smart School QR Code Attendance file copy process has started =================//
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\config\qrattendance-config.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\controllers\admin\qrattendance\Attendance.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\controllers\admin\qrattendance\Setting.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\core\MY_Addon_QRAttendanceController.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Afrikaans\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Albanian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Amharic\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Arabic\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Azerbaijan\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Basque\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Bengali\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Bosnian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Catalan\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Cebuano\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Chinese\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Croatia\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Czech\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Danish\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Dutch\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\English\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Esperanto\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Estonian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Finnish\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\French\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Galician\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Georgian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\German\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Greek\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Gujarati\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Haitian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Hebrew\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Hindi\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Hungarian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Icelandic\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Indonesian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Irish\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Italian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Japanese\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Javanese\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Kannada\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Korean\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Kurdish\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Lao\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Latin\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Latvian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Lithuanian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Macedonian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Malagasy\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Malay\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Malayalam\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Maltese\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Maori\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Marathi\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Mongolian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Nepali\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Norwegian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Persian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Polish\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Portuguese\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Punjabi\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Romanian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Russian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Scottish\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Sinhala\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Slovakian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Slovenian\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Spanish\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Sundanese\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Swahili\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Swedish\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Tagalog\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Tamil\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Telugu\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Thai\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Turkish\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Urdu\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Uzbek\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Vietnamese\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Welsh\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Xhosa\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\language\Yiddish\app_files\qrcode_lang.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\models\qrattendance\Qrsetting_model.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\views\admin\qrattendance\index.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\views\admin\qrattendance\setting.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\application\views\admin\qrattendance\_getProfileDetail.php
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\backend\images\checking-attendance.png
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\backend\images\checking-attendance.svg
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\backend\qrattendance\attendance_card-1.png
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\backend\qrattendance\attendance_card.png
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\backend\qrattendance\html5-qrcode.min.js
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\backend\qrattendance\style.css
+2025-12-22 08:27:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/qr_code_attendance/installer/install/files\backend\qrattendance\success.mp3
+2025-12-22 08:27:20 - //================= New Addon Smart School QR Code Attendance file copy process has ended =================//
+2025-12-22 08:27:20 - Query executed successfully.
+2025-12-22 08:27:20 - Query executed successfully.
+2025-12-22 08:27:20 - Query executed successfully.
+2025-12-22 08:27:20 - Query executed successfully.
+2025-12-22 08:27:20 - Query executed successfully.
+2025-12-22 08:27:20 - Query executed successfully.
+2025-12-22 08:27:21 - Query executed successfully.
+2025-12-22 08:27:21 - //================= New Addon qr_code_attendance process has ended =================//
+2026-01-12 10:55:44 - //=================Addon Folder uploading started.=================//
+2026-01-12 10:55:44 - New addon Uploading started on Addons Folder.
+2026-01-12 10:55:46 - Starting the unzip the addon folder.
+2026-01-12 10:55:48 - File unzipped successfully to:C:\wamp64\www\ACAGES/./addons/cbse_examination
+2026-01-12 10:55:48 - successfully decoded JSON file C:\wamp64\www\ACAGES/./addons/cbse_examination/addon_info.json
+2026-01-12 10:55:48 - inserted addon info details to addons table
+2026-01-12 10:56:08 - *************************************************************************************************************
+2026-01-12 10:56:08 - successfully decoded JSON file C:\wamp64\www\ACAGES/./addons/cbse_examination/addon_info.json
+2026-01-12 10:56:08 - //================= Before install/update backup process has started =================//
+2026-01-12 10:56:08 - Directory created successfully.:C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/backup/backup_info.json
+2026-01-12 10:56:08 - Data successfully written to C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/backup/backup_info.json
+2026-01-12 10:56:08 - //================= Copying Backup files process has started =================//
+2026-01-12 10:56:08 - //================= Copying Backup files process has ended successfully =================//
+2026-01-12 10:56:08 - //================= Before install/update Backup process has ended =================//
+2026-01-12 10:56:08 - //================= New Addon Smart School CBSE Examination installing process has started =================//
+2026-01-12 10:56:08 - //================= New Addon Smart School CBSE Examination file copy process has started =================//
+2026-01-12 10:56:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\config\cbse_config.php
+2026-01-12 10:56:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Assessment.php
+2026-01-12 10:56:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Chart.php
+2026-01-12 10:56:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Exam.php
+2026-01-12 10:56:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Grade.php
+2026-01-12 10:56:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Observation.php
+2026-01-12 10:56:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Observationparameter.php
+2026-01-12 10:56:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Report.php
+2026-01-12 10:56:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Result.php
+2026-01-12 10:56:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Schedule.php
+2026-01-12 10:56:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Setting.php
+2026-01-12 10:56:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Template.php
+2026-01-12 10:56:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Term.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\user\cbse\Exam.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\core\MY_Addon_CBSEController.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\helpers\cbse_helper.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Afrikaans\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Albanian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Amharic\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Arabic\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Azerbaijan\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Basque\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Bengali\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Bosnian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Catalan\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Cebuano\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Chinese\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Croatia\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Czech\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Danish\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Dutch\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\English\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Esperanto\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Estonian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Finnish\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\French\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Galician\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Georgian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\German\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Greek\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Gujarati\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Haitian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Hebrew\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Hindi\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Hungarian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Icelandic\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Indonesian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Irish\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Italian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Japanese\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Javanese\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Kannada\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Korean\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Kurdish\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Lao\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Latin\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Latvian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Lithuanian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Macedonian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Malagasy\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Malay\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Malayalam\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Maltese\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Maori\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Marathi\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Mongolian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Nepali\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Norwegian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Persian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Polish\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Portuguese\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Punjabi\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Romanian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Russian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Scottish\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Sinhala\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Slovakian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Slovenian\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Spanish\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Sundanese\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Swahili\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Swedish\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Tagalog\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Tamil\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Telugu\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Thai\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Turkish\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Urdu\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Uzbek\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Vietnamese\app_files\cbse_lang.php
+2026-01-12 10:56:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Welsh\app_files\cbse_lang.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Xhosa\app_files\cbse_lang.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Yiddish\app_files\cbse_lang.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\libraries\Cbse_mail_sms.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_assessment_model.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_exam_model.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_grade_model.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_observation_model.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_observation_parameter_model.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_result_model.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_student_rank_model.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_template_model.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_term_model.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbse_observation_term_model.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbse_observation_term_student_subparameter_model.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\Cbseexam_schedule_model.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\assessment\index.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\assessment\partial\_assessmentform.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\assessment\_add_type.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\chart\index.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\examtimetable.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\examwiserank.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\exam_rank.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\generate_rank.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\index.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\rank.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\read.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_add_exam.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_edit_exam.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_exam_attendancestudent.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_getSubjectByExam.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_partialexamstudent.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_partialexamSubjectDropdown.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_partialexamSubjects.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_partialstudentmarkEntry.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_studentrank.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_teacherRemark.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_templatewiserank.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\grade\gradelist.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\grade\partial\_gradeform.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\grade\_add.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\grade\_add_graderange.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\assign.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\index.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\partial\_observationtermform.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\partial\_termstudent.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\studentovservation.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\_add_subparameter.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\_exam_observationstudent.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\_get_assignclasssections.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\_observationform.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observationparameter\edit.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observationparameter\list.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\examsubject.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\index.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\templatewise.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\_cbsereport.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\_getTermTemplateWise.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\_printexam.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\_printmultiexam.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\_printmultiterm.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\_printsingleterm.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\result\index.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\result\_multi_exam_without_term.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\result\_printpdf.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\result\_printpdf_multi.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\result\_printpdf_multi_exam.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\schedule\index.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\schedule\_add_type.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\setting.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\edit.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\index.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\templatewiserank.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\viewtemplate.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\_all_term.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\_exam_wise.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\_term_wise.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\_without_term.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\term\edit.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\term\index.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\layout\cbseexam_css.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\themes\bold_blue\pages\cbseexam.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\themes\darkgray\pages\cbseexam.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\themes\default\pages\cbseexam.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\themes\material_pink\pages\cbseexam.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\themes\shadow_white\pages\cbseexam.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\themes\yellow\pages\cbseexam.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\user\cbse\result.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\user\cbse\timetable.php
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\backend\cbse_pdf_style.css
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\backend\dist\css\cbse-exam.css
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\uploads\cbseexam\index.html
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\uploads\cbseexam\template\background_img\index.html
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\uploads\cbseexam\template\header_image\index.html
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\uploads\cbseexam\template\left_sign\index.html
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\uploads\cbseexam\template\middle_sign\index.html
+2026-01-12 10:56:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\uploads\cbseexam\template\right_sign\index.html
+2026-01-12 10:56:10 - //================= New Addon Smart School CBSE Examination file copy process has ended =================//
+2026-01-12 10:56:10 - Query executed successfully.
+2026-01-12 10:56:10 - Query executed successfully.
+2026-01-12 10:56:10 - Query executed successfully.
+2026-01-12 10:56:10 - Query executed successfully.
+2026-01-12 10:56:10 - Query executed successfully.
+2026-01-12 10:56:10 - Query executed successfully.
+2026-01-12 10:56:10 - Query executed successfully.
+2026-01-12 10:56:11 - Query executed successfully.
+2026-01-12 10:56:11 - Query executed successfully.
+2026-01-12 10:56:11 - Query executed successfully.
+2026-01-12 10:56:11 - Query executed successfully.
+2026-01-12 10:56:11 - Query executed successfully.
+2026-01-12 10:56:11 - Query executed successfully.
+2026-01-12 10:56:11 - Query executed successfully.
+2026-01-12 10:56:11 - Query executed successfully.
+2026-01-12 10:56:11 - Query executed successfully.
+2026-01-12 10:56:11 - Query executed successfully.
+2026-01-12 10:56:11 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:12 - Query executed successfully.
+2026-01-12 10:56:13 - Query executed successfully.
+2026-01-12 10:56:13 - Query executed successfully.
+2026-01-12 10:56:13 - Query executed successfully.
+2026-01-12 10:56:13 - Query executed successfully.
+2026-01-12 10:56:13 - Query executed successfully.
+2026-01-12 10:56:13 - Query executed successfully.
+2026-01-12 10:56:13 - Query executed successfully.
+2026-01-12 10:56:14 - Query executed successfully.
+2026-01-12 10:56:14 - Query executed successfully.
+2026-01-12 10:56:14 - Query executed successfully.
+2026-01-12 10:56:14 - Query executed successfully.
+2026-01-12 10:56:14 - Query executed successfully.
+2026-01-12 10:56:14 - Query executed successfully.
+2026-01-12 10:56:14 - Query executed successfully.
+2026-01-12 10:56:15 - Query executed successfully.
+2026-01-12 10:56:15 - Query executed successfully.
+2026-01-12 10:56:15 - Query executed successfully.
+2026-01-12 10:56:15 - Query executed successfully.
+2026-01-12 10:56:15 - Query executed successfully.
+2026-01-12 10:56:15 - Query executed successfully.
+2026-01-12 10:56:15 - Query executed successfully.
+2026-01-12 10:56:15 - Query executed successfully.
+2026-01-12 10:56:16 - Query executed successfully.
+2026-01-12 10:56:16 - Query executed successfully.
+2026-01-12 10:56:16 - Query executed successfully.
+2026-01-12 10:56:16 - Query executed successfully.
+2026-01-12 10:56:16 - Query executed successfully.
+2026-01-12 10:56:16 - Query executed successfully.
+2026-01-12 10:56:16 - Query executed successfully.
+2026-01-12 10:56:16 - Query executed successfully.
+2026-01-12 10:56:16 - Query executed successfully.
+2026-01-12 10:56:17 - Query executed successfully.
+2026-01-12 10:56:17 - Query executed successfully.
+2026-01-12 10:56:17 - Query executed successfully.
+2026-01-12 10:56:17 - Query executed successfully.
+2026-01-12 10:56:17 - Query executed successfully.
+2026-01-12 10:56:17 - Query executed successfully.
+2026-01-12 10:56:17 - Query executed successfully.
+2026-01-12 10:56:18 - Query executed successfully.
+2026-01-12 10:56:18 - Query executed successfully.
+2026-01-12 10:56:18 - Query executed successfully.
+2026-01-12 10:56:18 - Query executed successfully.
+2026-01-12 10:56:18 - Query executed successfully.
+2026-01-12 10:56:19 - Query executed successfully.
+2026-01-12 10:56:19 - Query executed successfully.
+2026-01-12 10:56:19 - Query executed successfully.
+2026-01-12 10:56:19 - Query executed successfully.
+2026-01-12 10:56:19 - Query executed successfully.
+2026-01-12 10:56:19 - Query executed successfully.
+2026-01-12 10:56:19 - Query executed successfully.
+2026-01-12 10:56:19 - Query executed successfully.
+2026-01-12 10:56:19 - Query executed successfully.
+2026-01-12 10:56:20 - Query executed successfully.
+2026-01-12 10:56:20 - Query executed successfully.
+2026-01-12 10:56:20 - Query executed successfully.
+2026-01-12 10:56:20 - Query executed successfully.
+2026-01-12 10:56:20 - Query executed successfully.
+2026-01-12 10:56:20 - Query executed successfully.
+2026-01-12 10:56:21 - Query executed successfully.
+2026-01-12 10:56:21 - Query executed successfully.
+2026-01-12 10:56:21 - Query executed successfully.
+2026-01-12 10:56:21 - Query executed successfully.
+2026-01-12 10:56:21 - Query executed successfully.
+2026-01-12 10:56:21 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:22 - Query executed successfully.
+2026-01-12 10:56:23 - Query executed successfully.
+2026-01-12 10:56:23 - Query executed successfully.
+2026-01-12 10:56:23 - Query executed successfully.
+2026-01-12 10:56:23 - //================= New Addon cbse_examination process has ended =================//
+2026-01-15 14:48:56 - *************************************************************************************************************
+2026-01-15 14:48:56 - //================= Addon Smart School CBSE Examination unistall process has started =================//
+2026-01-15 14:48:56 - Removing files of Smart School CBSE Examinationprocess has started.
+2026-01-15 14:48:56 - successfully decoded JSON file C:\wamp64\www\ACAGES/./addons/cbse_examination/uninstall/unistall_directory.json
+2026-01-15 14:48:56 - Query execution of unistall the Smart School CBSE Examination addon process has started.
+2026-01-15 14:48:56 - Query executed successfully.
+2026-01-15 14:48:56 - Query executed successfully.
+2026-01-15 14:48:56 - Query executed successfully.
+2026-01-15 14:48:56 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:48:57 - Query executed successfully.
+2026-01-15 14:53:02 - *************************************************************************************************************
+2026-01-15 14:53:02 - successfully decoded JSON file C:\wamp64\www\ACAGES/./addons/cbse_examination/addon_info.json
+2026-01-15 14:53:02 - //================= Before install/update backup process has started =================//
+2026-01-15 14:53:02 - File already exists.:C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/backup/backup_info.json
+2026-01-15 14:53:02 - Data successfully written to C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/backup/backup_info.json
+2026-01-15 14:53:02 - //================= Copying Backup files process has started =================//
+2026-01-15 14:53:02 - //================= Copying Backup files process has ended successfully =================//
+2026-01-15 14:53:02 - //================= Before install/update Backup process has ended =================//
+2026-01-15 14:53:02 - //================= New Addon Smart School CBSE Examination installing process has started =================//
+2026-01-15 14:53:02 - //================= New Addon Smart School CBSE Examination file copy process has started =================//
+2026-01-15 14:53:02 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\config\cbse_config.php
+2026-01-15 14:53:02 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Assessment.php
+2026-01-15 14:53:02 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Chart.php
+2026-01-15 14:53:02 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Exam.php
+2026-01-15 14:53:02 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Grade.php
+2026-01-15 14:53:02 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Observation.php
+2026-01-15 14:53:02 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Observationparameter.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Report.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Result.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Schedule.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Setting.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Template.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\cbseexam\Term.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\controllers\user\cbse\Exam.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\core\MY_Addon_CBSEController.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\helpers\cbse_helper.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Afrikaans\app_files\cbse_lang.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Albanian\app_files\cbse_lang.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Amharic\app_files\cbse_lang.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Arabic\app_files\cbse_lang.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Azerbaijan\app_files\cbse_lang.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Basque\app_files\cbse_lang.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Bengali\app_files\cbse_lang.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Bosnian\app_files\cbse_lang.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Catalan\app_files\cbse_lang.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Cebuano\app_files\cbse_lang.php
+2026-01-15 14:53:03 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Chinese\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Croatia\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Czech\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Danish\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Dutch\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\English\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Esperanto\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Estonian\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Finnish\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\French\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Galician\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Georgian\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\German\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Greek\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Gujarati\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Haitian\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Hebrew\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Hindi\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Hungarian\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Icelandic\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Indonesian\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Irish\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Italian\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Japanese\app_files\cbse_lang.php
+2026-01-15 14:53:04 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Javanese\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Kannada\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Korean\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Kurdish\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Lao\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Latin\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Latvian\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Lithuanian\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Macedonian\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Malagasy\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Malay\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Malayalam\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Maltese\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Maori\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Marathi\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Mongolian\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Nepali\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Norwegian\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Persian\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Polish\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Portuguese\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Punjabi\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Romanian\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Russian\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Scottish\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Sinhala\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Slovakian\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Slovenian\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Spanish\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Sundanese\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Swahili\app_files\cbse_lang.php
+2026-01-15 14:53:05 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Swedish\app_files\cbse_lang.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Tagalog\app_files\cbse_lang.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Tamil\app_files\cbse_lang.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Telugu\app_files\cbse_lang.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Thai\app_files\cbse_lang.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Turkish\app_files\cbse_lang.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Urdu\app_files\cbse_lang.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Uzbek\app_files\cbse_lang.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Vietnamese\app_files\cbse_lang.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Welsh\app_files\cbse_lang.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Xhosa\app_files\cbse_lang.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\language\Yiddish\app_files\cbse_lang.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\libraries\Cbse_mail_sms.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_assessment_model.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_exam_model.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_grade_model.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_observation_model.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_observation_parameter_model.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_result_model.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_student_rank_model.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_template_model.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbseexam_term_model.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbse_observation_term_model.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\cbseexam\Cbse_observation_term_student_subparameter_model.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\models\Cbseexam_schedule_model.php
+2026-01-15 14:53:06 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\assessment\index.php
+2026-01-15 14:53:07 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\assessment\partial\_assessmentform.php
+2026-01-15 14:53:07 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\assessment\_add_type.php
+2026-01-15 14:53:07 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\chart\index.php
+2026-01-15 14:53:07 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\examtimetable.php
+2026-01-15 14:53:07 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\examwiserank.php
+2026-01-15 14:53:07 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\exam_rank.php
+2026-01-15 14:53:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\generate_rank.php
+2026-01-15 14:53:08 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\index.php
+2026-01-15 14:53:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\rank.php
+2026-01-15 14:53:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\read.php
+2026-01-15 14:53:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_add_exam.php
+2026-01-15 14:53:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_edit_exam.php
+2026-01-15 14:53:09 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_exam_attendancestudent.php
+2026-01-15 14:53:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_getSubjectByExam.php
+2026-01-15 14:53:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_partialexamstudent.php
+2026-01-15 14:53:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_partialexamSubjectDropdown.php
+2026-01-15 14:53:10 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_partialexamSubjects.php
+2026-01-15 14:53:12 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_partialstudentmarkEntry.php
+2026-01-15 14:53:16 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_studentrank.php
+2026-01-15 14:53:16 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_teacherRemark.php
+2026-01-15 14:53:17 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\exam\_templatewiserank.php
+2026-01-15 14:53:17 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\grade\gradelist.php
+2026-01-15 14:53:18 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\grade\partial\_gradeform.php
+2026-01-15 14:53:18 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\grade\_add.php
+2026-01-15 14:53:18 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\grade\_add_graderange.php
+2026-01-15 14:53:18 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\assign.php
+2026-01-15 14:53:19 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\index.php
+2026-01-15 14:53:19 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\partial\_observationtermform.php
+2026-01-15 14:53:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\partial\_termstudent.php
+2026-01-15 14:53:20 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\studentovservation.php
+2026-01-15 14:53:21 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\_add_subparameter.php
+2026-01-15 14:53:21 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\_exam_observationstudent.php
+2026-01-15 14:53:21 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\_get_assignclasssections.php
+2026-01-15 14:53:21 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observation\_observationform.php
+2026-01-15 14:53:21 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observationparameter\edit.php
+2026-01-15 14:53:22 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\observationparameter\list.php
+2026-01-15 14:53:22 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\examsubject.php
+2026-01-15 14:53:23 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\index.php
+2026-01-15 14:53:23 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\templatewise.php
+2026-01-15 14:53:23 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\_cbsereport.php
+2026-01-15 14:53:24 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\_getTermTemplateWise.php
+2026-01-15 14:53:24 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\_printexam.php
+2026-01-15 14:53:24 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\_printmultiexam.php
+2026-01-15 14:53:25 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\_printmultiterm.php
+2026-01-15 14:53:25 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\report\_printsingleterm.php
+2026-01-15 14:53:26 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\result\index.php
+2026-01-15 14:53:26 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\result\_multi_exam_without_term.php
+2026-01-15 14:53:28 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\result\_printpdf.php
+2026-01-15 14:53:29 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\result\_printpdf_multi.php
+2026-01-15 14:53:30 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\result\_printpdf_multi_exam.php
+2026-01-15 14:53:31 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\schedule\index.php
+2026-01-15 14:53:32 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\schedule\_add_type.php
+2026-01-15 14:53:32 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\setting.php
+2026-01-15 14:53:32 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\edit.php
+2026-01-15 14:53:33 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\index.php
+2026-01-15 14:53:34 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\templatewiserank.php
+2026-01-15 14:53:35 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\viewtemplate.php
+2026-01-15 14:53:36 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\_all_term.php
+2026-01-15 14:53:36 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\_exam_wise.php
+2026-01-15 14:53:36 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\_term_wise.php
+2026-01-15 14:53:36 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\template\_without_term.php
+2026-01-15 14:53:37 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\term\edit.php
+2026-01-15 14:53:37 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\cbseexam\term\index.php
+2026-01-15 14:53:37 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\layout\cbseexam_css.php
+2026-01-15 14:53:37 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\themes\bold_blue\pages\cbseexam.php
+2026-01-15 14:53:39 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\themes\darkgray\pages\cbseexam.php
+2026-01-15 14:53:39 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\themes\default\pages\cbseexam.php
+2026-01-15 14:53:40 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\themes\material_pink\pages\cbseexam.php
+2026-01-15 14:53:40 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\themes\shadow_white\pages\cbseexam.php
+2026-01-15 14:53:41 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\themes\yellow\pages\cbseexam.php
+2026-01-15 14:53:41 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\user\cbse\result.php
+2026-01-15 14:53:50 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\application\views\user\cbse\timetable.php
+2026-01-15 14:53:51 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\backend\cbse_pdf_style.css
+2026-01-15 14:53:51 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\backend\dist\css\cbse-exam.css
+2026-01-15 14:53:51 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\uploads\cbseexam\index.html
+2026-01-15 14:53:51 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\uploads\cbseexam\template\background_img\index.html
+2026-01-15 14:53:51 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\uploads\cbseexam\template\header_image\index.html
+2026-01-15 14:53:51 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\uploads\cbseexam\template\left_sign\index.html
+2026-01-15 14:53:51 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\uploads\cbseexam\template\middle_sign\index.html
+2026-01-15 14:53:51 - File was Copied successfully in location -C:\wamp64\www\ACAGES/./addons/cbse_examination/installer/install/files\uploads\cbseexam\template\right_sign\index.html
+2026-01-15 14:53:51 - //================= New Addon Smart School CBSE Examination file copy process has ended =================//
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:52 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:53 - Query executed successfully.
+2026-01-15 14:53:54 - Query executed successfully.
+2026-01-15 14:53:54 - Query executed successfully.
+2026-01-15 14:53:54 - Query executed successfully.
+2026-01-15 14:53:54 - Query executed successfully.
+2026-01-15 14:53:54 - Query executed successfully.
+2026-01-15 14:53:54 - Query executed successfully.
+2026-01-15 14:53:54 - Query executed successfully.
+2026-01-15 14:53:55 - Query executed successfully.
+2026-01-15 14:53:55 - Query executed successfully.
+2026-01-15 14:53:55 - Query executed successfully.
+2026-01-15 14:53:55 - Query executed successfully.
+2026-01-15 14:53:55 - Query executed successfully.
+2026-01-15 14:53:55 - Query executed successfully.
+2026-01-15 14:53:55 - Query executed successfully.
+2026-01-15 14:53:57 - Query executed successfully.
+2026-01-15 14:53:57 - Query executed successfully.
+2026-01-15 14:53:57 - Query executed successfully.
+2026-01-15 14:53:57 - Query executed successfully.
+2026-01-15 14:53:57 - Query executed successfully.
+2026-01-15 14:53:58 - Query executed successfully.
+2026-01-15 14:53:58 - Query executed successfully.
+2026-01-15 14:53:58 - Query executed successfully.
+2026-01-15 14:53:58 - Query executed successfully.
+2026-01-15 14:53:58 - Query executed successfully.
+2026-01-15 14:53:58 - Query executed successfully.
+2026-01-15 14:53:58 - Query executed successfully.
+2026-01-15 14:53:58 - Query executed successfully.
+2026-01-15 14:53:58 - Query executed successfully.
+2026-01-15 14:53:59 - Query executed successfully.
+2026-01-15 14:53:59 - Query executed successfully.
+2026-01-15 14:53:59 - Query executed successfully.
+2026-01-15 14:53:59 - Query executed successfully.
+2026-01-15 14:53:59 - Query executed successfully.
+2026-01-15 14:53:59 - Query executed successfully.
+2026-01-15 14:53:59 - Query executed successfully.
+2026-01-15 14:53:59 - Query executed successfully.
+2026-01-15 14:53:59 - Query executed successfully.
+2026-01-15 14:53:59 - Query executed successfully.
+2026-01-15 14:54:00 - Query executed successfully.
+2026-01-15 14:54:00 - Query executed successfully.
+2026-01-15 14:54:00 - Query executed successfully.
+2026-01-15 14:54:00 - Query executed successfully.
+2026-01-15 14:54:00 - Query executed successfully.
+2026-01-15 14:54:00 - Query executed successfully.
+2026-01-15 14:54:00 - Query executed successfully.
+2026-01-15 14:54:00 - Query executed successfully.
+2026-01-15 14:54:01 - Query executed successfully.
+2026-01-15 14:54:01 - Query executed successfully.
+2026-01-15 14:54:01 - Query executed successfully.
+2026-01-15 14:54:01 - Query executed successfully.
+2026-01-15 14:54:01 - Query executed successfully.
+2026-01-15 14:54:01 - Query executed successfully.
+2026-01-15 14:54:01 - Query executed successfully.
+2026-01-15 14:54:01 - Query executed successfully.
+2026-01-15 14:54:02 - Query executed successfully.
+2026-01-15 14:54:02 - Query executed successfully.
+2026-01-15 14:54:02 - Query executed successfully.
+2026-01-15 14:54:02 - Query executed successfully.
+2026-01-15 14:54:02 - Query executed successfully.
+2026-01-15 14:54:03 - Query executed successfully.
+2026-01-15 14:54:03 - Query executed successfully.
+2026-01-15 14:54:03 - Query executed successfully.
+2026-01-15 14:54:03 - Query executed successfully.
+2026-01-15 14:54:03 - Query executed successfully.
+2026-01-15 14:54:03 - Query executed successfully.
+2026-01-15 14:54:03 - Query executed successfully.
+2026-01-15 14:54:03 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - Query executed successfully.
+2026-01-15 14:54:04 - //================= New Addon cbse_examination process has ended =================//

@@ -580,54 +580,70 @@ class Examresult extends Admin_Controller
     }
     public function bulletin()
     {
-        if (!$this->rbac->hasPrivilege('marksheet', 'can_view')) {
+        if (!$this->rbac->hasPrivilege('print_marksheet', 'can_view')) {
             access_denied();
         }
-        $this->session->set_userdata('top_menu', 'Examinations');
-        $this->session->set_userdata('sub_menu', 'Examinations/bulletin');
         
-        $data['title'] = 'Bulletin de Notes';
+        $this->session->set_userdata('top_menu', 'Examinations'); 
+        $this->session->set_userdata('sub_menu', 'Examinations/bulletin_de_notes');
+        
+        // FETCH THE MISSING SETTINGS HERE
+        $data['sch_setting']   = $this->sch_setting_detail; 
+        
+        $data['title']         = 'Bulletin de Notes';
         $data['examgrouplist'] = $this->examgroup_model->get();
         $data['classlist']     = $this->class_model->get();
+        $data['sessionlist']   = $this->session_model->getAllSession(); 
 
         if ($this->input->server('REQUEST_METHOD') == "POST") {
             $exam_group_id   = $this->input->post('exam_group_id');
+            $exam_id         = $this->input->post('exam_id');
             $class_id        = $this->input->post('class_id');
-            $section_id      = $this->input->post('section_id'); // Added Section
+            $section_id      = $this->input->post('section_id'); 
+            $session_id      = $this->input->post('session_id');
             
             $data['exam_group_id'] = $exam_group_id;
+            $data['exam_id']       = $exam_id;
             $data['class_id']      = $class_id;
             $data['section_id']    = $section_id;
+            $data['session_id']    = $session_id;
             
-            // Fetch data for the table
-            $data['examList'] = $this->examgroup_model->getExamByExamGroup($exam_group_id);
-            $data['studentList'] = $this->student_model->searchByClassSection($class_id, $section_id);
+            $data['examList']    = $this->examgroup_model->getExamByExamGroup($exam_group_id);
+            $data['studentList'] = $this->examgroupstudent_model->searchExamStudents($exam_group_id, $exam_id, $class_id, $section_id, $session_id);
         }
 
         $this->load->view('layout/header', $data);
         $this->load->view('admin/examresult/bulletinSearch', $data);
         $this->load->view('layout/footer', $data);
     }
-public function print_bulletin()
+
+ public function print_bulletin()
 {
-    // PHP 8.2 Fix: Initialize arrays and variables
+    // AUTHORIZATION FIX: Ensure printing is also authorized for teachers
+    if (!$this->rbac->hasPrivilege('print_marksheet', 'can_view')) {
+        access_denied();
+    }
+
     $student_array = array();
     $exam_id       = $this->input->post('exam_id');
     $student_ids   = $this->input->post('student_ids');
+    $search_type   = $this->input->post('search'); // Capture which button was clicked
 
     if (empty($student_ids) || empty($exam_id)) {
         redirect('admin/examresult/bulletin');
     }
 
     $data['sch_setting'] = $this->sch_setting_detail;
-    $exam_details        = $this->examgroup_model->getExamByID($exam_id);
-    $data['exam']        = $exam_details; 
-    $data['exam_name']   = $exam_details->exam;
+    
+    // Fetch Exam Details
+    $exam_details         = $this->examgroup_model->getExamByID($exam_id);
+    $data['exam']         = $exam_details; 
+    $data['exam_name']    = $exam_details->exam;
+    $data['exam_description'] = $exam_details->description; 
 
     $current_session = $this->setting_model->getCurrentSession();
 
     foreach ($student_ids as $student_id) {
-        // 1. Fetch Student basics and their specific class/section IDs
         $this->db->select('students.*, classes.class, sections.section, student_session.id as student_session_id, student_session.class_id, student_session.section_id');
         $this->db->from('students');
         $this->db->join('student_session', 'student_session.student_id = students.id');
@@ -641,24 +657,24 @@ public function print_bulletin()
         if ($student_info) {
             $student_session_id = $student_info['student_session_id'];
             
-            // 2. NEW: Get the TRUE Effectif (Total students in this specific Class and Section)
+            // Get Total Class Students
             $this->db->where('class_id', $student_info['class_id']);
             $this->db->where('section_id', $student_info['section_id']);
             $this->db->where('session_id', $current_session);
             $student_info['total_class_students'] = $this->db->count_all_results('student_session');
 
-            // 3. Fetch Marks using the exact table/column names verified from acages(1).sql
+            // Fetch Marks 
             $this->db->select('exam_group_exam_results.get_marks, exam_group_exam_results.note, 
-                               exam_group_class_batch_exam_subjects.max_marks, 
-                               exam_group_class_batch_exam_subjects.min_marks, 
-                               subjects.name as subject_name, subjects.code');
+                            exam_group_class_batch_exam_subjects.max_marks, 
+                            exam_group_class_batch_exam_subjects.min_marks, 
+                            subjects.name as subject_name, subjects.code');
             $this->db->from('exam_group_class_batch_exam_subjects');
             $this->db->join('subjects', 'subjects.id = exam_group_class_batch_exam_subjects.subject_id');
             $this->db->join('exam_group_class_batch_exam_students', 
-                             'exam_group_class_batch_exam_students.exam_group_class_batch_exam_id = exam_group_class_batch_exam_subjects.exam_group_class_batch_exams_id');
+                            'exam_group_class_batch_exam_students.exam_group_class_batch_exam_id = exam_group_class_batch_exam_subjects.exam_group_class_batch_exams_id');
             $this->db->join('exam_group_exam_results', 
-                             'exam_group_exam_results.exam_group_class_batch_exam_subject_id = exam_group_class_batch_exam_subjects.id 
-                              AND exam_group_exam_results.exam_group_class_batch_exam_student_id = exam_group_class_batch_exam_students.id', 'left');
+                            'exam_group_exam_results.exam_group_class_batch_exam_subject_id = exam_group_class_batch_exam_subjects.id 
+                            AND exam_group_exam_results.exam_group_class_batch_exam_student_id = exam_group_class_batch_exam_students.id', 'left');
             
             $this->db->where('exam_group_class_batch_exam_subjects.exam_group_class_batch_exams_id', $exam_id);
             $this->db->where('exam_group_class_batch_exam_students.student_session_id', $student_session_id);
@@ -671,6 +687,413 @@ public function print_bulletin()
     }
 
     $data['student_list'] = $student_array;
-    $this->load->view('admin/examresult/_printBulletin', $data);
+
+    // --- ROUTING LOGIC BASED ON BUTTON CLICKED ---
+    if ($search_type == 'generate_ar') {
+        // Load the new Arabic template
+        $this->load->view('admin/examresult/_printBulletinAr', $data);
+    } else {
+        // Load the default standard template
+        $this->load->view('admin/examresult/_printBulletin', $data);
+    }
+    }
+
+
+    public function exam_result_search()
+    {
+        if (!$this->rbac->hasPrivilege('print_marksheet', 'can_view')) {
+            access_denied();
+        }
+        
+        // This MUST match the URL in your sidebar_sub_menus table to keep the menu highlighted
+        $this->session->set_userdata('top_menu', 'Examinations'); 
+        $this->session->set_userdata('sub_menu', 'admin/examresult/exam_result_search');
+        
+        $data['sch_setting']   = $this->sch_setting_detail; 
+        $data['title']         = 'Exam Result Landscape';
+        $data['examgrouplist'] = $this->examgroup_model->get();
+        $data['classlist']     = $this->class_model->get();
+        $data['sessionlist']   = $this->session_model->getAllSession(); 
+
+        if ($this->input->server('REQUEST_METHOD') == "POST") {
+            $exam_group_id   = $this->input->post('exam_group_id');
+            $exam_id         = $this->input->post('exam_id');
+            $class_id        = $this->input->post('class_id');
+            $section_id      = $this->input->post('section_id'); 
+            $session_id      = $this->input->post('session_id');
+            
+            $data['exam_group_id'] = $exam_group_id;
+            $data['exam_id']       = $exam_id;
+            $data['class_id']      = $class_id;
+            $data['section_id']    = $section_id;
+            $data['session_id']    = $session_id;
+            
+            $data['examList']    = $this->examgroup_model->getExamByExamGroup($exam_group_id);
+            $data['studentList'] = $this->examgroupstudent_model->searchExamStudents($exam_group_id, $exam_id, $class_id, $section_id, $session_id);
+        }
+
+        $this->load->view('layout/header', $data);
+        // Pointing to your new duplicated view file
+        $this->load->view('admin/examresult/examResultSearch', $data);
+        $this->load->view('layout/footer', $data);
+    }
+
+
+
+    public function print_class_result()
+    {
+        if (!$this->rbac->hasPrivilege('print_marksheet', 'can_view')) {
+            access_denied();
+        }
+
+        $student_array = array();
+        $exam_id       = $this->input->post('exam_id');
+        $student_ids   = $this->input->post('student_ids');
+        $search_type   = $this->input->post('search'); 
+
+        if (empty($student_ids) || empty($exam_id)) {
+            redirect('admin/examresult/bulletin');
+        }
+
+        $data['sch_setting'] = $this->sch_setting_detail;
+        $exam_details        = $this->examgroup_model->getExamByID($exam_id);
+        $data['exam']        = $exam_details; 
+
+        $current_session = $this->setting_model->getCurrentSession();
+        $all_subjects = array();
+
+        foreach ($student_ids as $student_id) {
+            $this->db->select('students.*, classes.class, sections.section, student_session.id as student_session_id, student_session.class_id, student_session.section_id');
+            $this->db->from('students');
+            $this->db->join('student_session', 'student_session.student_id = students.id');
+            $this->db->join('classes', 'student_session.class_id = classes.id');
+            $this->db->join('sections', 'student_session.section_id = sections.id');
+            $this->db->where('students.id', $student_id);
+            $this->db->where('student_session.session_id', $current_session);
+            $query = $this->db->get();
+            $student_info = $query->row_array();
+
+            if ($student_info) {
+                // ADDED max_marks TO THE SELECT BELOW
+                $this->db->select('exam_group_exam_results.get_marks, exam_group_class_batch_exam_subjects.max_marks, subjects.name as subject_name, subjects.code');
+                $this->db->from('exam_group_class_batch_exam_subjects');
+                $this->db->join('subjects', 'subjects.id = exam_group_class_batch_exam_subjects.subject_id');
+                $this->db->join('exam_group_class_batch_exam_students', 'exam_group_class_batch_exam_students.exam_group_class_batch_exam_id = exam_group_class_batch_exam_subjects.exam_group_class_batch_exams_id');
+                $this->db->join('exam_group_exam_results', 'exam_group_exam_results.exam_group_class_batch_exam_subject_id = exam_group_class_batch_exam_subjects.id AND exam_group_exam_results.exam_group_class_batch_exam_student_id = exam_group_class_batch_exam_students.id', 'left');
+                $this->db->where('exam_group_class_batch_exam_subjects.exam_group_class_batch_exams_id', $exam_id);
+                $this->db->where('exam_group_class_batch_exam_students.student_session_id', $student_info['student_session_id']);
+                
+                $marks_query = $this->db->get();
+                $results = $marks_query->result_array();
+                $student_info['exam_result'] = $results;
+
+                foreach ($results as $res) {
+                    if (!in_array($res['subject_name'], $all_subjects)) {
+                        $all_subjects[] = $res['subject_name'];
+                    }
+                }
+                
+                $student_array[] = $student_info;
+            }
+        }
+
+        $data['student_list'] = $student_array;
+        $data['subjects']     = $all_subjects; 
+        $data['academic_year'] = $this->setting_model->getCurrentSessionName();
+
+        $this->load->view('admin/examresult/_printClassResult', $data);
+    }
+
+    public function bulletincollege()
+    {
+        if (!$this->rbac->hasPrivilege('print_marksheet', 'can_view')) {
+            access_denied();
+        }
+        
+        $this->session->set_userdata('top_menu', 'Examinations'); 
+        $this->session->set_userdata('sub_menu', 'admin/examresult/bulletincollege');
+        
+        $data['sch_setting']   = $this->sch_setting_detail; 
+        $data['title']         = 'Bulletin de Notes College';
+        $data['examgrouplist'] = $this->examgroup_model->get();
+        $data['classlist']     = $this->class_model->get();
+        $data['sessionlist']   = $this->session_model->get(); // Using working get() method
+
+        if ($this->input->server('REQUEST_METHOD') == "POST") {
+            $exam_group_id   = $this->input->post('exam_group_id');
+            $exam_id         = $this->input->post('exam_id');
+            $class_id        = $this->input->post('class_id');
+            $section_id      = $this->input->post('section_id'); 
+            $session_id      = $this->input->post('session_id');
+            
+            $data['exam_group_id'] = $exam_group_id;
+            $data['exam_id']       = $exam_id;
+            $data['class_id']      = $class_id;
+            $data['section_id']    = $section_id;
+            $data['session_id']    = $session_id;
+            
+            $data['examList'] = $this->examgroup_model->getExamByExamGroup($exam_group_id);
+
+            // Only search if we have the minimum required data to prevent SQL NULL errors
+            if ($exam_id && $class_id && $session_id) {
+                $data['studentList'] = $this->examgroupstudent_model->searchExamStudents($exam_group_id, $exam_id, $class_id, $section_id, $session_id);
+            } else {
+                $data['studentList'] = array();
+            }
+        }
+
+        $this->load->view('layout/header', $data);
+        $this->load->view('admin/examresult/bulletinSearchCollege', $data);
+        $this->load->view('layout/footer', $data);
+    }
+
+    public function print_bulletin_college()
+    {
+        if (!$this->rbac->hasPrivilege('print_marksheet', 'can_view')) {
+            access_denied();
+        }
+
+        $student_array = array();
+        $subject_leaderboard = array(); 
+        $class_averages = array(); // To store everyone's average for ranking
+        $exam_id = $this->input->post('exam_id');
+        $student_ids = $this->input->post('student_ids');
+
+        if (empty($student_ids) || empty($exam_id)) {
+            redirect('admin/examresult/bulletincollege');
+        }
+
+        $data['sch_setting'] = $this->sch_setting_detail;
+        $exam_details = $this->examgroup_model->getExamByID($exam_id);
+        $data['exam_description'] = $exam_details->description;
+        $current_session = $this->setting_model->getCurrentSession();
+
+        // --- PASS 1: COLLECT ALL DATA FOR RANKING ---
+        foreach ($student_ids as $student_id) {
+            $this->db->select('students.*, classes.class, sections.section, student_session.id as student_session_id');
+            $this->db->from('students');
+            $this->db->join('student_session', 'student_session.student_id = students.id');
+            $this->db->join('classes', 'student_session.class_id = classes.id');
+            $this->db->join('sections', 'student_session.section_id = sections.id');
+            $this->db->where('students.id', $student_id);
+            $this->db->where('student_session.session_id', $current_session);
+            $student_info = $this->db->get()->row_array();
+
+            if ($student_info) {
+                $this->db->select('exam_group_exam_results.get_marks, subjects.id as subject_id, subjects.name as subject_name, exam_group_class_batch_exam_subjects.coef');
+                $this->db->from('exam_group_class_batch_exam_subjects');
+                $this->db->join('subjects', 'subjects.id = exam_group_class_batch_exam_subjects.subject_id');
+                $this->db->join('exam_group_class_batch_exam_students', 'exam_group_class_batch_exam_students.exam_group_class_batch_exam_id = exam_group_class_batch_exam_subjects.exam_group_class_batch_exams_id');
+                $this->db->join('exam_group_exam_results', 'exam_group_exam_results.exam_group_class_batch_exam_subject_id = exam_group_class_batch_exam_subjects.id AND exam_group_exam_results.exam_group_class_batch_exam_student_id = exam_group_class_batch_exam_students.id', 'left');
+                $this->db->where('exam_group_class_batch_exam_subjects.exam_group_class_batch_exams_id', $exam_id);
+                $this->db->where('exam_group_class_batch_exam_students.student_session_id', $student_info['student_session_id']);
+                
+                $marks = $this->db->get()->result();
+                $student_info['exam_result'] = $marks;
+
+                // Calculations for Overall Rank
+                $st_m_coef = 0; $st_coef = 0;
+                foreach ($marks as $m) {
+                    $c = ($m->coef > 0) ? (float)$m->coef : 1.0;
+                    $st_m_coef += ((float)$m->get_marks * $c);
+                    $st_coef += $c;
+                    $subject_leaderboard[$m->subject_id][] = (float)$m->get_marks;
+                }
+                
+                if ($st_coef > 0) {
+                    $class_averages[$student_id] = $st_m_coef / $st_coef;
+                }
+                $student_array[] = $student_info;
+            }
+        }
+
+        // --- PASS 2: CALCULATE RANKS ---
+        foreach ($subject_leaderboard as $sub_id => $marks_list) {
+            rsort($subject_leaderboard[$sub_id]);
+            $subject_leaderboard[$sub_id] = array_values(array_unique($subject_leaderboard[$sub_id]));
+        }
+
+        // Overall Class Ranks
+        arsort($class_averages);
+        $rank_map = []; $r = 1;
+        foreach ($class_averages as $sid => $avg) {
+            $rank_map[$sid] = $r++;
+        }
+
+        $data['class_average'] = count($class_averages) > 0 ? array_sum($class_averages) / count($class_averages) : 0;
+        $data['max_class_avg'] = count($class_averages) > 0 ? max($class_averages) : 0;
+        $data['min_class_avg'] = count($class_averages) > 0 ? min($class_averages) : 0;
+        $data['rank_map'] = $rank_map;
+        $data['subject_leaderboard'] = $subject_leaderboard;
+        $data['student_list'] = $student_array;
+
+        $this->load->view('admin/examresult/_printBulletinCollege', $data);
+    }
+
+public function btn_sem_college()
+{
+    if (!$this->rbac->hasPrivilege('exam_result', 'can_view')) {
+        access_denied();
+    }
+
+    $this->session->set_userdata('top_menu', 'Examinations');
+    $this->session->set_userdata('sub_menu', 'admin/examresult/btn_sem_college');
+
+    $data['sch_setting']   = $this->sch_setting_detail;
+    $data['title']         = 'Bulletin Semestre Collège';
+    $data['examgrouplist'] = $this->examgroup_model->get();
+    $data['classlist']     = $this->class_model->get();
+    $data['sessionlist']   = $this->session_model->get();
+
+    if ($this->input->server('REQUEST_METHOD') == "POST") {
+        $exam_group_id = $this->input->post('exam_group_id');
+        $devoir_exams  = $this->input->post('devoir_exams'); // This is an array
+        $comp_exam     = $this->input->post('comp_exam');    // This is a single ID
+        $class_id      = $this->input->post('class_id');
+        $section_id    = $this->input->post('section_id');
+        $session_id    = $this->input->post('session_id');
+
+        $data['exam_group_id'] = $exam_group_id;
+        $data['devoir_exams']  = $devoir_exams;
+        $data['comp_exam']     = $comp_exam;
+        $data['class_id']      = $class_id;
+        $data['section_id']    = $section_id;
+        $data['session_id']    = $session_id;
+
+        // Populate exams for the dropdowns based on group
+        $data['examList'] = $this->examgroup_model->getExamByExamGroup($exam_group_id);
+
+        // Fetch students using the main Composition exam as the base
+        if ($comp_exam && $class_id && $session_id) {
+            $data['studentList'] = $this->examgroupstudent_model->searchExamStudents($exam_group_id, $comp_exam, $class_id, $section_id, $session_id);
+        } else {
+            $data['studentList'] = array();
+        }
+    }
+
+    $this->load->view('layout/header', $data);
+    $this->load->view('admin/examresult/semester_college_search', $data);
+    $this->load->view('layout/footer', $data);
+}
+
+public function print_semester_college()
+{
+    if (!$this->rbac->hasPrivilege('print_marksheet', 'can_view')) {
+        access_denied();
+    }
+
+    $student_ids     = $this->input->post('student_ids');
+    $exam_group_id   = $this->input->post('exam_group_id');
+    $devoir_exam_ids = $this->input->post('devoir_exams'); // Array of IDs
+    $comp_exam_id    = $this->input->post('comp_exam');    // Single ID
+
+    if (empty($student_ids) || empty($comp_exam_id)) {
+        redirect('admin/examresult/btn_sem_college');
+    }
+
+    $data['sch_setting'] = $this->sch_setting_detail;
+    $exam_details        = $this->examgroup_model->getExamByID($comp_exam_id);
+    $data['exam_description'] = $exam_details->description;
+    $current_session     = $this->setting_model->getCurrentSession();
+
+    $student_array       = array();
+    $class_averages      = array(); // For ranking
+
+    // --- PASS 1: COLLECT ALL DATA AND CALCULATE AVERAGES ---
+    foreach ($student_ids as $student_id) {
+        $this->db->select('students.*, classes.class, sections.section, student_session.id as student_session_id');
+        $this->db->from('students');
+        $this->db->join('student_session', 'student_session.student_id = students.id');
+        $this->db->join('classes', 'student_session.class_id = classes.id');
+        $this->db->join('sections', 'student_session.section_id = sections.id');
+        $this->db->where('students.id', $student_id);
+        $this->db->where('student_session.session_id', $current_session);
+        $student_info = $this->db->get()->row_array();
+
+        if ($student_info) {
+            $session_id = $student_info['student_session_id'];
+
+            // Master subjects list from Composition Exam
+            $this->db->select('exam_group_class_batch_exam_subjects.*, subjects.name as subject_name, subjects.id as sub_real_id');
+            $this->db->from('exam_group_class_batch_exam_subjects');
+            $this->db->join('subjects', 'subjects.id = exam_group_class_batch_exam_subjects.subject_id');
+            $this->db->where('exam_group_class_batch_exams_id', $comp_exam_id);
+            $subjects = $this->db->get()->result();
+
+            $semester_results = array();
+            $st_weighted_total = 0;
+            $st_coef_total = 0;
+
+            foreach ($subjects as $sub) {
+                // 1. Calculate Devoir Average
+                $total_devoir = 0;
+                $devoir_count = 0;
+                foreach ($devoir_exam_ids as $d_id) {
+                    $d_mark = $this->get_semester_mark($d_id, $session_id, $sub->subject_id);
+                    if ($d_mark !== null) {
+                        $total_devoir += (float)$d_mark;
+                        $devoir_count++;
+                    }
+                }
+                $avg_devoir = ($devoir_count > 0) ? ($total_devoir / $devoir_count) : 0;
+
+                // 2. Get Comp Mark
+                $comp_mark = $this->get_semester_mark($comp_exam_id, $session_id, $sub->subject_id);
+                $final_comp = ($comp_mark !== null) ? (float)$comp_mark : 0;
+
+                // 3. Semester Logic
+                $moy_20 = ($avg_devoir + $final_comp) / 2;
+                $coef   = ($sub->coef > 0) ? (float)$sub->coef : 1.0;
+                $m_coef = $moy_20 * $coef;
+
+                $semester_results[] = (object) array(
+                    'subject_name' => $sub->subject_name,
+                    'devoir'       => $avg_devoir,
+                    'comp'         => $final_comp,
+                    'moy_20'       => $moy_20,
+                    'coef'         => $coef,
+                    'm_coef'       => $m_coef
+                );
+
+                $st_weighted_total += $m_coef;
+                $st_coef_total     += $coef;
+            }
+
+            $student_info['exam_result'] = $semester_results;
+            if ($st_coef_total > 0) {
+                $class_averages[$student_id] = $st_weighted_total / $st_coef_total;
+            }
+            $student_array[] = $student_info;
+        }
+    }
+
+    // --- PASS 2: CALCULATE RANKING ---
+    arsort($class_averages);
+    $rank_map = array(); $r = 1;
+    foreach ($class_averages as $sid => $avg) { $rank_map[$sid] = $r++; }
+
+    $data['student_list']   = $student_array;
+    $data['rank_map']       = $rank_map;
+    $data['class_average']  = (count($class_averages) > 0) ? array_sum($class_averages) / count($class_averages) : 0;
+    $data['max_avg']        = (count($class_averages) > 0) ? max($class_averages) : 0;
+    $data['min_avg']        = (count($class_averages) > 0) ? min($class_averages) : 0;
+
+    $this->load->view('admin/examresult/_printSemesterCollege', $data);
+}
+
+/**
+ * Helper to fetch mark based on your specific table structure
+ */
+private function get_semester_mark($exam_id, $student_session_id, $subject_id)
+{
+    $this->db->select('exam_group_exam_results.get_marks');
+    $this->db->from('exam_group_class_batch_exam_subjects');
+    $this->db->join('exam_group_class_batch_exam_students', 'exam_group_class_batch_exam_students.exam_group_class_batch_exam_id = exam_group_class_batch_exam_subjects.exam_group_class_batch_exams_id');
+    $this->db->join('exam_group_exam_results', 'exam_group_exam_results.exam_group_class_batch_exam_subject_id = exam_group_class_batch_exam_subjects.id AND exam_group_exam_results.exam_group_class_batch_exam_student_id = exam_group_class_batch_exam_students.id');
+    $this->db->where('exam_group_class_batch_exam_subjects.exam_group_class_batch_exams_id', $exam_id);
+    $this->db->where('exam_group_class_batch_exam_subjects.subject_id', $subject_id);
+    $this->db->where('exam_group_class_batch_exam_students.student_session_id', $student_session_id);
+    $res = $this->db->get()->row();
+    return ($res) ? $res->get_marks : null;
 }
 }

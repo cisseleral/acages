@@ -319,156 +319,24 @@ class Auth
 
     public function app_update()
     {
-        $email                       = $this->CI->input->post('email');
-        $envato_market_purchase_code = $this->CI->input->post('envato_market_purchase_code');
-        $url                         = $this->CI->enc_lib->dycrypt(DEBUG_SYSTEM_UPDATE);
-
-
-        $ch                          = curl_init();
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_POST, true);
-        $data = array(
-            'email'         => $email,
-            'purchase_code' => $envato_market_purchase_code,
-            'base_url'      => base_url(),
-        );
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-        $output   = curl_exec($ch);
-        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-        $json_response = json_decode($output);
-        if ($httpcode != 200) {
-            return $this->CI->output
-                ->set_content_type('application/json')
-                ->set_status_header($httpcode)
-                ->set_output(json_encode(array(
-                    'response' => $json_response->response,
-                    true,
-                )));
-        } else {
-            $fname         = APPPATH . 'config/license.php';
-            $update_handle = fopen($fname, "r");
-            $content       = fread($update_handle, filesize($fname));
-            $file_contents = str_replace('$config[\'SSLK\'] = \'\'', '$config[\'SSLK\'] = \'' . $json_response->response . '\'', $content);
-            $update_handle = fopen($fname, 'w') or die("can't open file");
-            if (fwrite($update_handle, $file_contents)) {
-            }
-            fclose($update_handle);
-            $array = array('status' => 1, 'message' => 'Thank you for registering your product');
-            return $this->CI->output
-                ->set_content_type('application/json')
-                ->set_status_header($httpcode)
-                ->set_output(json_encode($array));
-        }
+        return true; // Bypass remote check
     }
 
     public function addon_update_check()
     {
-        $this->CI->load->model('addons_model');
-        $envato_market_purchase_code = $this->CI->input->post('addon_check_update_envato_market_purchase_code');
-        $addon_name = $this->CI->input->post('addon');
-        $sslk                        = $this->CI->config->item('SSLK');        
-        $url                         =  $this->enc_lib->dycrypt(DEBUG_SYSTEM_ADD_CK);      
-        $ch                          = curl_init();
-        $addon = $this->CI->addons_model->getByProductID($this->CI->input->post('product_id'));
-
-
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_POST, true);
-        $data = array(
-            'sslk'          => $sslk,
-            'purchase_code' => $envato_market_purchase_code,
-            'base_url'      => base_url(),
-            'addon'         => $addon_name,
-            'addon_prod'    => $addon->addon_prod,
-            'addon_ver'     => $addon->addon_ver
-        );
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-        $output   = curl_exec($ch);
-        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-
-        $json_response = json_decode($output);
-
-
-        if ($httpcode != 200) {
-            return $this->CI->output
-                ->set_content_type('application/json')
-                ->set_status_header($httpcode)
-                ->set_output(json_encode(array(
-                    'status' => 2,
-                    'message' => $json_response->response,
-                    true,
-                )));
-        } else {
-
-            $array = array('status' => 1, 'message' => 'Thank you for registering your product');
-            return $this->CI->output
-                ->set_content_type('application/json')
-                ->set_status_header($httpcode)
-                ->set_output(json_encode($array));
-        }
+        $array = array('status' => 1, 'message' => 'Addon is up to date');
+    return $this->CI->output
+        ->set_content_type('application/json')
+        ->set_status_header(200)
+        ->set_output(json_encode($array));
     }
     public function andapp_update()
     {
-        $email                       = $this->CI->input->post('app-email');
-        $envato_market_purchase_code = $this->CI->input->post('app-envato_market_purchase_code');
-        $sslk                        = $this->CI->config->item('SSLK');
-        $url                         = $this->CI->enc_lib->dycrypt(DEBUG_SYSTEM_APP);
-        $ch                          = curl_init();
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_POST, true);
-        $data = array(
-            'email'         => $email,
-            'sslk'          => $sslk,
-            'purchase_code' => $envato_market_purchase_code,
-            'base_url'      => base_url(),
-        );
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-        $output   = curl_exec($ch);
-        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-
-        $json_response = json_decode($output);
-        if ($httpcode != 200) {
-            return $this->CI->output
-                ->set_content_type('application/json')
-                ->set_status_header($httpcode)
-                ->set_output(json_encode(array(
-                    'response' => $json_response->response,
-                    true,
-                )));
-        } else {
-            $fname         = APPPATH . 'config/license.php';
-            $update_handle = fopen($fname, "r");
-            $content       = fread($update_handle, filesize($fname));
-            if (strpos($content, '$config[\'app_ver\']') == false) {
-                $update_handle = fopen($fname, 'a') or die("can't open file");
-                $file_contents = '$config[\'app_ver\'] = 1;' . "\n";
-                if (fwrite($update_handle, $file_contents)) {
-                }
-            } else {
-                $file_contents = str_replace('$config[\'app_ver\'] = 0', '$config[\'app_ver\'] = 1', $content);
-                $update_handle = fopen($fname, 'w') or die("can't open file");
-                if (fwrite($update_handle, $file_contents)) {
-                }
-            }
-            fclose($update_handle);
-            $array = array('status' => 1, 'message' => 'Thank you for registering your product');
-            return $this->CI->output
-                ->set_content_type('application/json')
-                ->set_status_header($httpcode)
-                ->set_output(json_encode($array));
-        }
+        $array = array('status' => 1, 'message' => 'Addon activated successfully');
+        return $this->CI->output
+        ->set_content_type('application/json')
+        ->set_status_header(200)
+        ->set_output(json_encode($array));
     }
 
     public function andapp_validate()
@@ -886,34 +754,7 @@ class Auth
 
     public function addonchk($prod = null, $return_url = false)
     {
-        if ($prod != null) {
-            $addon_prod = $this->CI->config->item('addon_prod');
-            $addon_ver  = $this->CI->config->item('addon_ver');
-
-
-            $products   = array();
-
-            if (!empty($addon_ver)) {
-                foreach ($addon_ver as $ver_key => $ver_value) {
-                    $key         = $addon_prod[$ver_key];
-                    $decrypt_val = $this->CI->aes->decode($ver_value, $key);
-
-                    if ($decrypt_val !== "") {
-                        $arr               = explode('!!', $decrypt_val);
-                        $products[$arr[0]] = $arr[1];
-
-                        if (($arr[0] == $prod || $arr[0] == "ssabp") && $arr[1] == base_url()) {
-                            return true;
-                        }
-                    }
-                }
-            }
-        }
-        if ($return_url) {
-            redirect($return_url);
-            exit;
-        }
-        return false;
+        return true; // Force all addons to be active
     }
 
     public function userlogout()

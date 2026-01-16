@@ -26,6 +26,7 @@
                 <th class=""><?php echo $this->lang->line('room_no'); ?><small class="req"> *</small></th>
                 <th class="tddm150"><?php echo $this->lang->line('marks_max');?><small class="req"> *</small></th>
                 <th class="tddm150"><?php echo $this->lang->line('marks_min');?><small class="req"> *</small></th>
+                <th class="tddm150"><?php echo $this->lang->line('subject_cof'); ?><small class="req"> *</small></th>
                 <?php
                     if ($examgroupDetail->exam_group_type == "coll_grade_system") {
                         ?>
@@ -81,9 +82,9 @@
                             </span>
                         </div>
                     </td>
-<td>
-<input type="text" name="duration<?php echo $count; ?>" class="form-control duration tddm200" value="<?php echo $exam_subject_value->duration; ?>" autocomplete="off">
-</td>
+                    <td>
+                        <input type="text" name="duration<?php echo $count; ?>" class="form-control duration tddm200" value="<?php echo $exam_subject_value->duration; ?>" autocomplete="off">
+                    </td>
                     <td>
                         <input class="form-control credit_hours tddm150" name="credit_hours<?php echo $count; ?>" type="text" value="<?php echo $exam_subject_value->credit_hours; ?>"/>
                     </td>
@@ -97,7 +98,18 @@
                         <input name="rows[]" type="hidden" value="<?php echo $count; ?>">
                         <input name="prev_row[<?php echo $count; ?>]" type="hidden" value="<?php echo $exam_subject_value->id; ?>">
                         <input class="form-control min_marks tddm150" name="min_marks_<?php echo $count; ?>" type="number" value="<?php echo $exam_subject_value->min_marks; ?>"/>
-                    </td>                    
+                    </td>
+                    <td>
+    <input type="number" step="0.01" name="coef_<?php echo $count; ?>" 
+           class="form-control tddm150" placeholder="Coef" 
+           value="<?php echo isset($exam_subject_value->coef) ? $exam_subject_value->coef : ''; ?>">
+</td>
+
+<?php if ($examgroupDetail->exam_group_type == "coll_grade_system") { ?>
+    <td class="text-center" style="vertical-align: middle; cursor: pointer;">
+        <span class="text text-danger remove fa fa-times"></span>
+    </td>
+<?php } ?>                    
                     <td class="text-center" style="vertical-align: middle; cursor: pointer;">
                         <span class="text text-danger remove fa fa-times"></span>
                     </td>                 

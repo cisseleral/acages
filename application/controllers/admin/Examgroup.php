@@ -637,6 +637,10 @@ class Examgroup extends Admin_Controller
                 if (trim($this->input->post('min_marks_' . $row_value)) <= 0 ) {
                     $this->form_validation->set_rules('min_marks', $this->lang->line('min_marks'), 'trim|required|xss_clean', array('required' =>$this->lang->line('invalid_min_marks')));
                 }
+                $coef_input = $this->input->post('coef_' . $row_value);
+                if ($coef_input != "" && !is_numeric($coef_input)) {
+                    $this->form_validation->set_rules('coef', $this->lang->line('subject_cof'), 'trim|required|xss_clean', array('required' => "Invalid Coefficient"));
+                }
             }
         }
 
@@ -685,6 +689,7 @@ class Examgroup extends Admin_Controller
                             'room_no'                         => $this->input->post('room_no_' . $row_value),
                             'max_marks'                       => $this->input->post('max_marks_' . $row_value),
                             'min_marks'                       => $this->input->post('min_marks_' . $row_value),
+                            'coef'                            => $this->input->post('coef_' . $row_value),
                         );
                     }
                 } else {
@@ -700,6 +705,7 @@ class Examgroup extends Admin_Controller
                         'room_no'                         => $this->input->post('room_no_' . $row_value),
                         'max_marks'                       => $this->input->post('max_marks_' . $row_value),
                         'min_marks'                       => $this->input->post('min_marks_' . $row_value),
+                        'coef'                            => $this->input->post('coef_' . $row_value),
                     );
                 }
             }
@@ -985,3 +991,4 @@ class Examgroup extends Admin_Controller
     }
 
 }
+

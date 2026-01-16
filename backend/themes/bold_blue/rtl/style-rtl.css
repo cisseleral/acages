@@ -73,7 +73,7 @@ margin-right: -50vw;margin-left: auto;left: 0;}
 }
 .catecheck input[type="checkbox"], .catecheck input[type="radio"] {
     left: 9000px;
-    right: auto !important;
+    right: auto;
 }
 .priceblock {
     align-items: start !important;

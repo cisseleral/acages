@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         @page { size: A4; margin: 0; }
         * {
@@ -15,24 +16,19 @@
             background: #eee; color: #000; 
         }
 
-        /* --- COMPLETE RTL SUPPORT --- */
+        /* --- ARABIC / RTL SUPPORT --- */
         <?php if($this->config->item('language') == 'Arabic') { ?>
             body { direction: rtl; text-align: right; }
-            /* Flip the identity table layout */
             .identity-table td { text-align: right !important; }
-            /* Flip the Observation Box border to the right side */
             .obs-box { 
                 border-left: none !important; 
                 border-right: 4px solid #42b80bff !important; 
                 padding-left: 0 !important; 
                 padding-right: 10px !important; 
             }
-            /* Flip the Statistics Table values */
             .stats-table td { text-align: center !important; }
             .stats-table td:first-child { text-align: right !important; }
-            /* Ensure signatures flip order (Teacher on right, Parent on left) */
             .signature-row { flex-direction: row; }
-            /* Reverse table alignments */
             .marks-table th, .marks-table td { text-align: center !important; }
             .marks-table th:nth-child(2), .marks-table td:nth-child(2) { text-align: right !important; padding-right: 8px; }
         <?php } ?>
@@ -42,98 +38,140 @@
             margin: 10px auto; background: #fff; 
             display: flex; flex-direction: column;
             position: relative; overflow: hidden;
+            page-break-after: always;
         }
 
-        .watermark { 
-            position: absolute; top: 50%; left: 50%; 
+        .watermark-container { 
+            position: absolute; 
+            top: 50%; left: 50%; 
             transform: translate(-50%, -50%); 
-            width: 90%; opacity: 0.11; z-index: 0; pointer-events: none; 
+            width: 80%; opacity: 0.12; z-index: 0; 
+            pointer-events: none; 
         }
-
-        .header-img { width: 100%; height: auto; z-index: 1; margin-bottom: 8px; }
-        
+        .watermark-container img { width: 100%; height: auto; }
+                /* --- THE FIX: Print-Specific Override --- */
+        @media print {
+            .watermark-container {
+                /* Positioning Fixes */
+                top: 50vh !important; 
+                left: 50% !important;
+                transform: translate(-50%, -50%) !important;
+                position: fixed !important; 
+                
+                /* TRANSPARENCY FIX */
+                /* 0.05 is very light, 0.1 is medium. Adjust this until satisfied */
+                opacity: 0.15 !important; 
+                
+                /* Ensure the browser actually renders the transparency */
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+        .header-img { width: 100%; height: auto; position: relative; z-index: 1; margin-bottom: 8px; }
         .exam-banner { 
             background: #05AD05 !important; color: #000 !important; 
             text-align: center; padding: 2px; font-size: 24px; 
             font-weight: bold; text-transform: uppercase; margin-bottom: 10px;
-            z-index: 1;
+            position: relative; z-index: 1;
         }
 
-        .identity-table { width: 100%; margin-bottom: 5px; border-collapse: collapse; font-size: 15px; z-index: 1; line-height: 2;}
+        .identity-table { width: 100%; margin-bottom: 5px; border-collapse: collapse; font-size: 15px; position: relative; z-index: 1; line-height: 2; background: transparent !important;}
         .photo-box { width: 90px; height: 85px; border: 1px solid #05AD05; object-fit: cover; }
 
-        .marks-table { width: 100%; border-collapse: collapse; z-index: 1; }
+        .marks-table { width: 100%; border-collapse: collapse; position: relative; z-index: 1; background: transparent !important; }
         .marks-table th { border: 2px solid #000; padding: 6px; background: #05AD05 !important; font-size: 16px; }
-        .marks-table td { border: 2px solid #000; padding: 2px 5px; text-align: center; font-size: 12px; }
+        .marks-table td { border: 2px solid #000; padding: 2px 5px; text-align: center; font-size: 12px; background: transparent !important; }
 
         .total-row td { font-size: 16px !important; padding: 5px !important; font-weight: bold; }
-
-        .bottom-section { margin-top: 15px; z-index: 1; }
+        .bottom-section { margin-top: 15px; position: relative; z-index: 1; background: transparent !important; }
         .recap-flex { display: flex; justify-content: space-between; margin-bottom: 8px; }
         .obs-box { width: 50%; border-left: 4px solid #42b80bff; padding-left: 10px; font-size: 16px;}
-        
         .writing-lines {
             margin-top: 10px; height: 75px; width: 95%;
             background: repeating-linear-gradient(to bottom, transparent, transparent 24px, #000 24px, #000 25px);
         }
+        .stats-table { width: 48%; border-collapse: collapse; background: transparent !important; }
+        .stats-table td { border: 2px solid #000; padding: 4px 6px; font-weight: bold; font-size: 15px; text-align: center; background: transparent !important; }
+        .val-bg { background: rgba(249, 249, 249, 0.5) !important; }
 
-        .stats-table { width: 48%; border-collapse: collapse; }
-        .stats-table td { border: 2px solid #000; padding: 4px 6px; font-weight: bold; font-size: 15px; text-align: center; }
-        .val-bg { background: #f9f9f9 !important; }
-
-        .signature-section { margin-top: 10px; width: 100%; z-index: 1; }
+        .signature-section { margin-top: 10px; width: 100%; position: relative; z-index: 1; }
         .signature-row { display: flex; justify-content: space-between; text-align: center; font-weight: bold; font-size: 14px; }
         .signature-row div { width: 30%; height: 65px; }
 
-        .footer-fixed { margin-top: auto; z-index: 1; }
-        .footer-info { display: flex; justify-content: space-between; align-items: center; font-size: 10px; border-top: 1px solid #000; padding-top: 5px; font-style: italic; }
+        .footer-fixed { margin-top: auto; position: relative; z-index: 1; }
+        .footer-info { display: flex; justify-content: space-between; align-items: center; font-size: 10px; border-top: 0px solid #000; padding-top: 5px; font-style: italic; }
         .footer-img { width: 100%; height: auto; display: block; margin-top: 2px; }
 
-        @media print { body { background: none; } .a4-container { margin: 0; box-shadow: none; page-break-after: always; height: 297mm; } }
+        @media print { 
+            body { background: none; } 
+            .a4-container { margin: 0; box-shadow: none; height: 297mm; } 
+        }
     </style>
 </head>
 <body>
 
 <?php 
+// 1. CALCULATE STATISTICS BASED ONLY ON PARTICIPATING STUDENTS
 $all_student_averages = [];
 foreach ($student_list as $s) {
-    $st_get = 0; $st_max = 0;
-    foreach ($s['exam_result'] as $r) { $st_get += (float)$r->get_marks; $st_max += (float)$r->max_marks; }
-    $all_student_averages[$s['admission_no']] = ($st_max > 0) ? ($st_get / $st_max) * 10 : 0;
+    if(!empty($s['exam_result'])){
+        $st_get = 0; $st_max = 0;
+        foreach ($s['exam_result'] as $r) { 
+            $st_get += (float)$r->get_marks; 
+            $st_max += (float)$r->max_marks; 
+        }
+        if ($st_max > 0) {
+            $all_student_averages[$s['admission_no']] = ($st_get / $st_max) * 10;
+        }
+    }
 }
+
+// Fixed Total Students (Only those with exam results)
+$total_exam_students = count($all_student_averages);
+
+// Ranking logic
 arsort($all_student_averages);
 $rank_map = []; $rank = 1; $prev_score = -1; $i = 1;
 foreach ($all_student_averages as $adm_no => $score) {
     if ($score != $prev_score) { $rank = $i; }
     $rank_map[$adm_no] = $rank; $prev_score = $score; $i++;
 }
-$class_average = (count($all_student_averages) > 0) ? array_sum($all_student_averages) / count($all_student_averages) : 0;
+
+// Averages and Extremes in 2 decimal places
+$class_average = ($total_exam_students > 0) ? array_sum($all_student_averages) / $total_exam_students : 0;
+$max_score = ($total_exam_students > 0) ? max($all_student_averages) : 0;
+$min_score = ($total_exam_students > 0) ? min($all_student_averages) : 0;
 
 if (!empty($student_list)) { 
     foreach ($student_list as $student) { 
+        // Only print marksheet if student has results for the exam
+        if (empty($student['exam_result'])) continue;
+
         $t_get = 0; $t_max = 0; $row_count = 1;
 ?>
 
 <div class="a4-container">
-    <img src="<?php echo base_url('uploads/school_content/logo/'.$sch_setting->admin_logo); ?>" class="watermark">
+    <div class="watermark-container">
+        <img src="<?php echo base_url('uploads/marksheet/watermark.png'); ?>">
+    </div>
+
     <img src="<?php echo base_url('uploads/marksheet/header_image.png'); ?>" class="header-img">
-    <div class="exam-banner"><?php echo $exam_name; ?></div>
+    <div class="exam-banner"><?php echo $exam_description; ?></div>
 
     <table class="identity-table">
         <tr>
             <td width="110">
-                <img src="<?php echo base_url($student['image']); ?>" class="photo-box" onerror="this.src='<?php echo base_url('uploads/student_images/no_image.png'); ?>'">
+                <img src="<?php echo base_url(rawurlencode($student['image'])); ?>" class="photo-box" onerror="this.src='<?php echo base_url('uploads/student_images/no_image.png'); ?>'">
             </td>
             <td valign="top" style="padding: 0 15px;">
                 <strong><?php echo $this->lang->line('name'); ?>:</strong> <?php echo $student['firstname'].' '.$student['lastname']; ?><br>
                 <strong><?php echo $this->lang->line('admission_no'); ?>:</strong> <?php echo $student['admission_no']; ?><br>
-                <strong><?php echo $this->lang->line('date_of_birth'); ?>:</strong> <?php echo date($sch_setting->date_format, strtotime($student['dob'])); ?>
+                <strong><?php echo $this->lang->line('date_of_birth'); ?>:</strong> <?php echo ($student['dob'] != "0000-00-00" && $student['dob'] != "") ? date($sch_setting->date_format, strtotime($student['dob'])) : ""; ?>
             </td>
-            <td valign="top" style="text-align: right;">
+            <td valign="top" style="text-align: left;">
                 <strong><?php echo $this->lang->line('session'); ?>:</strong> <?php echo $sch_setting->session; ?><br>
                 <strong><?php echo $this->lang->line('class'); ?>:</strong> <?php echo $student['class'].' ('.$student['section'].')'; ?><br>
-                <strong><?php echo $this->lang->line('total_students'); ?>:</strong> <?php echo $student['total_class_students']; ?>
-            </td>
+                <strong><?php echo $this->lang->line('total_students'); ?>:</strong> <?php echo $total_exam_students; ?> </td>
         </tr>
     </table>
 
@@ -141,21 +179,22 @@ if (!empty($student_list)) {
         <thead>
             <tr>
                 <th width="5%">Nº</th>
-                <th align="<?php echo ($this->config->item('language') == 'Arabic') ? 'right' : 'left'; ?>" style="padding:0 8px;"><?php echo $this->lang->line('subject'); ?></th>
+                <th align="<?php echo ($this->config->item('language') == 'Arabic') ? 'right' : 'center'; ?>" style="padding:0 8px;"><?php echo $this->lang->line('subject'); ?></th>
                 <th width="10%"><?php echo $this->lang->line('marks'); ?></th>
                 <th width="10%"><?php echo $this->lang->line('out_of'); ?></th>
                 <th width="25%"><?php echo $this->lang->line('appreciation'); ?></th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($student['exam_result'] as $res) { 
-                $m = (float)$res->get_marks; $mx = (float)$res->max_marks; $t_get += $m; $t_max += $mx;
-            ?>
+            <?php 
+                foreach ($student['exam_result'] as $res) { 
+                    $m = (float)$res->get_marks; $mx = (float)$res->max_marks; $t_get += $m; $t_max += $mx;
+                ?>
                 <tr>
                     <td><?php echo sprintf("%02d", $row_count++); ?></td>
-                    <td align="<?php echo ($this->config->item('language') == 'Arabic') ? 'right' : 'left'; ?>" style="padding:0 8px;"><?php echo $res->subject_name; ?></td>
-                    <td><strong><?php echo (float)$res->get_marks; ?></strong></td>
-                    <td><?php echo (float)$res->max_marks; ?></td>
+                    <td align="<?php echo ($this->config->item('language') == 'Arabic') ? 'right' : 'center'; ?>" style="padding:0 8px;"><strong><?php echo $res->subject_name; ?></strong></td>
+                    <td><strong><?php echo number_format($m, 2); ?></strong></td>
+                    <td><?php echo number_format($mx, 0); ?></td>
                     <td><?php 
                         $p = ($mx > 0) ? ($m / $mx) * 100 : 0;
                         if ($p >= 90) echo $this->lang->line('app_excellent');
@@ -171,9 +210,9 @@ if (!empty($student_list)) {
             
             <tr class="total-row" style="background:#05AD05 !important;">
                 <td colspan="2" align="<?php echo ($this->config->item('language') == 'Arabic') ? 'right' : 'left'; ?>" style="padding:0 8px;"><?php echo $this->lang->line('total_marks'); ?></td>
-                <td><?php echo (float)$t_get; ?></td>
-                <td><?php echo (float)$t_max; ?></td>
-                <td><?php echo ($t_max > 0) ? (float)number_format(($t_get / $t_max) * 10, 2) : '0'; ?> / 10</td>
+                <td><?php echo number_format($t_get, 2); ?></td>
+                <td><?php echo number_format($t_max, 0); ?></td>
+                <td></td>
             </tr>
         </tbody>
     </table>
@@ -184,34 +223,30 @@ if (!empty($student_list)) {
                 <div style="font-weight:bold; text-decoration:underline; font-style:italic; font-size:20px; text-align: center; width:100%;">
                     <?php echo $this->lang->line('observations'); ?>
                 </div>
-                <div class="writing-lines">
-                    </div>
+                <div class="writing-lines"></div>
             </div>
             
             <table class="stats-table">
                 <tr>
-                    <td colspan="2" style="text-align:<?php echo ($this->config->item('language') == 'Arabic') ? 'right' : 'left'; ?>;" width="50%"><?php echo $this->lang->line('average'); ?></td>
-                    <td colspan="2" class="val-bg"><?php echo (float)number_format((($t_max > 0) ? ($t_get / $t_max) * 10 : 0), 2); ?> / 10</td>
+                    <td colspan="2" style="text-align:<?php echo ($this->config->item('language') == 'Arabic') ? 'right' : 'center'; ?>;" width="50%"><?php echo $this->lang->line('average'); ?></td>
+                    <td colspan="2" class="val-bg"><?php echo number_format((($t_max > 0) ? ($t_get / $t_max) * 10 : 0), 2); ?> / 10</td>
                 </tr>
                 <tr>
-                    <td colspan="2" style="text-align:<?php echo ($this->config->item('language') == 'Arabic') ? 'right' : 'left'; ?>;"><?php echo $this->lang->line('rank'); ?></td>
+                    <td colspan="2" style="text-align:<?php echo ($this->config->item('language') == 'Arabic') ? 'right' : 'center'; ?>;"><?php echo $this->lang->line('rank'); ?></td>
                     <td colspan="2" class="val-bg">
                         <?php 
                             $r = $rank_map[$student['admission_no']];
-                            echo $r . (($r == 1) ? "<sup>er</sup>" : "<sup>ème</sup>");
+                            echo $r . (($r == 1) ? "er" : "ème");
                         ?>
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2" style="text-align:<?php echo ($this->config->item('language') == 'Arabic') ? 'right' : 'left'; ?>;"><?php echo $this->lang->line('class_average'); ?></td>
-                    <td colspan="2" class="val-bg"><?php echo (float)number_format($class_average, 2); ?> / 10</td>
-                </tr>
+                    <td colspan="2" style="text-align:<?php echo ($this->config->item('language') == 'Arabic') ? 'right' : 'center'; ?>;"><?php echo $this->lang->line('class_average'); ?></td>
+                    <td colspan="2" class="val-bg"><?php echo number_format($class_average, 2); ?> / 10</td> </tr>
                 <tr>
                     <td width="25%"><?php echo $this->lang->line('max_marks'); ?></td>
-                    <td width="25%" class="val-bg"><?php echo !empty($all_student_averages) ? (float)number_format(max($all_student_averages), 1) : '0'; ?></td>
-                    <td width="25%"><?php echo $this->lang->line('min_marks'); ?></td>
-                    <td width="25%" class="val-bg"><?php echo !empty($all_student_averages) ? (float)number_format(min($all_student_averages), 1) : '0'; ?></td>
-                </tr>
+                    <td width="25%" class="val-bg"><?php echo number_format($max_score, 2); ?></td> <td width="25%"><?php echo $this->lang->line('min_marks'); ?></td>
+                    <td width="25%" class="val-bg"><?php echo number_format($min_score, 2); ?></td> </tr>
             </table>
         </div>
     </div>
@@ -237,3 +272,64 @@ if (!empty($student_list)) {
 
 </body>
 </html>
+
+<div class="no-print" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+    <button onclick="downloadPDF()" style="background: #d9534f; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        <i class="fa fa-download"></i> Download PDF Directly
+    </button>
+</div>
+
+<script>
+function downloadPDF() {
+    // Select the outer container that holds all students
+    const element = document.body; 
+
+    const opt = {
+        margin:       0,
+        filename:     'School_Bulletins.pdf',
+        image:        { type: 'jpeg', quality: 0.95 },
+        // This is the key: it forces a new PDF page at every .student-page div
+        pagebreak:    { mode: ['css', 'legacy'], before: '.student-page' },
+        html2canvas:  { 
+            scale: 1.5, // Reduced scale to save memory for 30+ pages
+            useCORS: true,
+            logging: false 
+        },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    // Show a "Processing" message because 30 pages takes a few seconds
+    const btn = document.querySelector('.no-print button');
+    btn.innerHTML = "Processing... Please wait";
+    btn.disabled = true;
+
+    html2pdf().set(opt).from(element).save().then(() => {
+        btn.innerHTML = "Download PDF Directly";
+        btn.disabled = false;
+    });
+}
+</script>
+
+<style>
+/* Hide the button when someone actually uses Ctrl+P */
+@media print {
+    .no-print { display: none !important; }
+}
+
+@media all {
+    .student-page {
+        page-break-after: always !important; /* Forces break for browser print */
+        break-after: page !important;
+        display: block;
+        width: 210mm;
+        margin: 0 auto;
+    }
+}
+
+.a4-container {
+    position: relative;
+    height: 297mm; /* Absolute height to prevent content overlap */
+    overflow: hidden;
+    background: #fff;
+}
+</style>

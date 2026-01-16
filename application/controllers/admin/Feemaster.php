@@ -303,4 +303,126 @@ class Feemaster extends Admin_Controller
         $this->load->view('layout/footer', $data);
     }    
 
+    public function bills()
+    {
+        // CHANGE: Changed 'fees_collection' to 'fees_master' to align with standard system roles
+        if (!$this->rbac->hasPrivilege('fees_master', 'can_view')) {
+            access_denied();
+        }
+
+        $this->session->set_userdata('top_menu', 'Fees Collection');
+        $this->session->set_userdata('sub_menu', 'admin/feemaster/bills');
+
+        $data['title'] = 'Monthly Bills';
+        $data['classlist'] = $this->class_model->get();
+        $data['sch_setting'] = $this->sch_setting_detail;
+
+        if ($this->input->server('REQUEST_METHOD') == "POST") {
+            $class_id   = $this->input->post('class_id');
+            $section_id = $this->input->post('section_id');
+            
+            $data['class_id']   = $class_id;
+            $data['section_id'] = $section_id;
+
+            if (empty($class_id)) {
+                $data['studentList'] = $this->student_model->get(); 
+            } else {
+                $data['studentList'] = $this->student_model->searchByClassSection($class_id, $section_id);
+            }
+        }
+
+        $this->load->view('layout/header', $data);
+        $this->load->view('admin/feemaster/billSearch', $data);
+        $this->load->view('layout/footer', $data);
+    }
+
+    public function print_bills()
+    {
+        if (!$this->rbac->hasPrivilege('fees_master', 'can_view')) {
+            access_denied();
+        }
+
+        $student_ids = $this->input->post('student_ids');
+        if (empty($student_ids)) {
+            redirect('admin/feemaster/bills');
+        }
+
+        $data['sch_setting'] = $this->sch_setting_detail;
+        $current_session = $this->setting_model->getCurrentSession();
+        $student_array = array();
+        
+        $today = strtotime(date('Y-m-d'));
+        $fifteen_days_later = strtotime("+15 days", $today);
+
+        foreach ($student_ids as $student_id) {
+            $this->db->select('students.*, classes.class, sections.section, student_session.id as student_session_id, student_session.class_id, student_session.section_id');
+            $this->db->from('students');
+            $this->db->join('student_session', 'student_session.student_id = students.id');
+            $this->db->join('classes', 'student_session.class_id = classes.id');
+            $this->db->join('sections', 'student_session.section_id = sections.id');
+            $this->db->where('students.id', $student_id);
+            $this->db->where('student_session.session_id', $current_session);
+            $student_info = $this->db->get()->row_array();
+
+            if ($student_info) {
+                $all_fees = $this->studentfeemaster_model->getStudentFees($student_info['student_session_id']);
+                $filtered_fees = array();
+                $max_due_date = "";
+                $total_balance_to_pay = 0;
+
+                foreach ($all_fees as $fee_group) {
+                    $qualified_items = array();
+                    foreach ($fee_group->fees as $fee) {
+                        $amount_paid = 0;
+                        $amount_discount = 0; // Initialize discount variable
+
+                        if (isset($fee->amount_detail) && !empty($fee->amount_detail)) {
+                            $amount_detail = json_decode($fee->amount_detail);
+                            if ($amount_detail) {
+                                foreach ($amount_detail as $payment) {
+                                    $amount_paid += $payment->amount;
+                                    // ADDED: Summing the discounts (remises)
+                                    if (isset($payment->amount_discount)) {
+                                        $amount_discount += $payment->amount_discount;
+                                    }
+                                }
+                            }
+                        }
+
+                        // UPDATED: Balance is now Amount - (Paid + Reduction)
+                        $total_settled = $amount_paid + $amount_discount;
+                        $balance = $fee->amount - $total_settled;
+                        
+                        $due_date_timestamp = strtotime($fee->due_date);
+
+                        // If balance is > 0 and it's due, it shows up
+                        if ($balance > 0 && ($due_date_timestamp <= $today || $due_date_timestamp <= $fifteen_days_later)) {
+                            $fee->calculated_paid = $total_settled; // We show total settled (Paid + Reduction) as "Paid"
+                            $fee->calculated_balance = $balance;
+                            $qualified_items[] = $fee;
+                            $total_balance_to_pay += $balance;
+
+                            if ($max_due_date == "" || $due_date_timestamp > strtotime($max_due_date)) {
+                                $max_due_date = $fee->due_date;
+                            }
+                        }
+                    }
+                    if (!empty($qualified_items)) {
+                        $fee_group->fees = $qualified_items;
+                        $filtered_fees[] = $fee_group;
+                    }
+                }
+
+                if (!empty($filtered_fees)) {
+                    $student_info['fees_list'] = $filtered_fees;
+                    $student_info['max_due_date'] = $max_due_date;
+                    $student_info['total_balance_to_pay'] = $total_balance_to_pay;
+                    $student_array[] = $student_info;
+                }
+            }
+        }
+
+        $data['student_list'] = $student_array;
+        $this->load->view('admin/feemaster/_printBills', $data);
+    }
 }

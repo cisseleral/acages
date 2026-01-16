@@ -2468,7 +2468,7 @@ $lang['processing_fees_type'] = "Processing Fees Type";
 $lang['percentage_fix_amount'] = "Percentage/Fix Amount";
 
 
-
+// Builltin Elementair  
 
 
 $lang['bulletin_de_notes'] = "Bulletin de Notes";
@@ -2493,3 +2493,24 @@ $lang['app_insufficient'] = "Insufficient";
 $lang['obs_excellent'] = "Excellent work, congratulations.";
 $lang['obs_satisfactory'] = "Satisfactory results.";
 $lang['obs_poor'] = "Needs more effort.";
+$lang['marksheet'] = "Marksheet";
+$lang['bulletin_de_notes'] = "Report Card Primary";
+
+
+// Print Bill and Reminder
+$lang['monthly_bills'] = "Monthly Bills";
+$lang['monthly_bills'] = "Factures Mensuelles";
+$lang['monthly_bills_and_fees_reminder'] = "Rappel de Factures et Frais Mensuels";
+$lang['generation_date'] = "Date de Génération";
+$lang['partial'] = "Partiel";
+$lang['overdue'] = "En Retard";
+$lang['upcoming'] = "À Venir";
+$lang['bill_warning_text'] = "Cette facture doit être réglée avant le";
+$lang['due_date_strict'] = "délai de rigueur.";
+$lang['total_to_pay'] = "Total To Pay";
+
+
+
+$lang['subject_cof'] = "cof";
+$lang['report_card_college'] = "Report Card College";
+$lang['btn_sem_college'] = "Sem Report Card College";
